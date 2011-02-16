@@ -13,16 +13,9 @@ jobs:
     inputs:
       serviceEndpoint: Calculator StoreBroker Connection
       appId: $(AppId)
-      flightId: $(FlightId)
-      inputMethod: JsonAndZip
-      jsonPath: $(StoreBrokerPackagePath)\SBCalculator.json
-      zipPath: $(StoreBrokerPackagePath)\SBCalculator.zip
+
       force: true
-      skipPolling: true
-      targetPublishMode: Immediate
-      logPath: $(StoreBrokerLogPath)
-      deletePackages: true
-      numberOfPackagesToKeep: 0
+
 
   - task: APS-Aero-Package.aero-upload-task.AeroUploadTask.AeroUpload@0
     displayName: Aero Upload
